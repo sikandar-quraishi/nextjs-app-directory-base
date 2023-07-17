@@ -3,9 +3,9 @@ import style from "./footer.module.css";
 
 const Footer = () => {
   return (
-    <nav className={style.footer}>
+    <footer className={style.footer}>
       <p>Footer Page</p>
-    </nav>
+    </footer>
   );
 };
 

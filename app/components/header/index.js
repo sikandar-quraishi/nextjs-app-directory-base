@@ -1,10 +1,28 @@
-import React from 'react'
-import style from './header.module.css'
+import React from "react";
+import Link from "next/link";
+import style from "./header.module.css";
 
 const Header = () => {
   return (
-    <div className={style.header}><p>Header Page</p></div>
-  )
-}
+    <nav>
+      <ul>
+        <li>
+          <Link className="active" href="/">
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link href="/news">News</Link>
+        </li>
+        <li>
+          <Link href="/contact">Contact</Link>
+        </li>
+        <li style={{ float: "right" }}>
+          <Link href="/about">About</Link>
+        </li>
+      </ul>
+    </nav>
+  );
+};
 
-export default Header
+export default Header;

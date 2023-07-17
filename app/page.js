@@ -5,10 +5,9 @@ export const metadata = {
   description: 'I creating this project for the practice perpus only.',
 }
  
-
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <main>
       Hello
     </main>
   )
