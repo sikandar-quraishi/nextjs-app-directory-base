@@ -1,3 +1,4 @@
+import Card from './components/card'
 import styles from './page.module.css'
 
 export const metadata = {
@@ -7,8 +8,8 @@ export const metadata = {
  
 export default function Home() {
   return (
-    <main>
-      Hello
+    <main className='container'>
+      <Card/>
     </main>
   )
 }
