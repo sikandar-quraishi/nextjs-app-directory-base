@@ -1,5 +1,6 @@
-import Header from "./components/header";
+import Header from "./components/header/header.component";
 import Footer from "./components/footer";
+import { NextAuthProvider } from "./context/providers";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -14,9 +15,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header />
-        {children}
-        <Footer />
+        <NextAuthProvider>
+          <Header />
+          {children}
+          <Footer />
+        </NextAuthProvider>
       </body>
     </html>
   );
