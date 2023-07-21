@@ -217,3 +217,9 @@ p {
   flex-direction: row;
   gap: 1rem;
 }
+/* Register form CSS */
+.registerFrom{
+  display: flex;
+  flex-direction: column;
+  width: 275px;
+}
