@@ -1,25 +1,23 @@
 "use client";
 
-import { useRouter } from "next/navigation";
 import Link from "next/link";
 
-const ProductDetails = (props) => {
-  const router = useRouter();
+async function getData(id) {
+  const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
+  return res.json();
+}
 
-  console.log("router.query", props);
-  const { id } = props.params;
-  // console.log("id",id)
+const ProductDetails = async ({ params: { id } }) => {
+  const product = await getData(id);
 
-  // Fetch the specific product details using the `id` from the API
-
-  const product = { id: 1, name: "Product 1", description: "Product description" };
+  // const product = { id: 1, title: "Product 1", description: "Product description" };
 
   return (
     <div>
       ID : {id}
       <h1>Product Details</h1>
-      <p>Name: {product.name}</p>
-      <p>Description: {product.description}</p>
+      <p>Title: {product.title}</p>
+      <p>Description: {product.body}</p>
       <Link href={`/products/edit/${id}`}>Edit Product</Link>
     </div>
   );
