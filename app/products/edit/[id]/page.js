@@ -1,11 +1,16 @@
+'use client'
 import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
+import { useRouter } from "next/navigation";
 
-const EditProduct = () => {
+const EditProduct = (props) => {
   const [productName, setProductName] = useState('');
   const [productDescription, setProductDescription] = useState('');
-  const router = useRouter();
-  const { id } = router.query;
+  const { id } = props.params;
+
+  // const router = useRouter();
+  // const { id } = router.query;
+  // console.log("props.params",props)
+  // const { id } = props.params;
 
   useEffect(() => {
     // Fetch the product details using the `id` from the API
