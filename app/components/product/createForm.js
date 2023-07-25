@@ -12,7 +12,7 @@ const CreateProduct = () => {
     e.preventDefault();
     // Call the API to create the product using `productName` and `productDescription`
     // After successful creation, navigate back to the product list page or the new product's details page
-    router.push("/products");
+    router.push("/product");
   };
 
   return (

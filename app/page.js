@@ -14,7 +14,7 @@ export default async function Home() {
   return (
     <main className={styles.container}>
       <div>This is home page, everyone can see it</div>
-      <Link href={'/products'}>Go to Product list page</Link>
+      <Link href={'/product'}>Go to Product list page</Link>
     </main>
   );
 }
