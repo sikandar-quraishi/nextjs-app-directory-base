@@ -2,12 +2,12 @@ import React from 'react'
 
 export const metadata = {
   title: 'About page',
-  description: 'This is about page description.',
+  description: '',
 }
-const page = () => {
+const Page = () => {
   return (
-    <div>page</div>
+    <div>About page</div>
   )
 }
 
-export default page
+export default Page
