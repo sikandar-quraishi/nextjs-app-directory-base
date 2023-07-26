@@ -12,6 +12,7 @@ export const metadata = {
 const Signin = (props) => {
   console.log("Loin props", props);
   const { data: session } = useSession();
+  // console.log("session", session)
 
   const [formData, setFormData] = useState({
     username: "",
